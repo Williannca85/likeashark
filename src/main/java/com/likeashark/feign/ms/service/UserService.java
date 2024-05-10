@@ -18,13 +18,17 @@ public class UserService {
        return response;
     }
 
+
     public void saveUser(UserDto user){
       client.saveUser(user);
     }
 
-    public void updateUser(Integer id, UserDto user){}
 
+    public void updateUser(Integer id, UserDto user){
+        client.updateUser(id, user);
+    }
 
-
-    public void deleteUser(Integer id){}
+     public void deleteUser(Integer id){
+        client.deleteUser(id);
+    }
 }

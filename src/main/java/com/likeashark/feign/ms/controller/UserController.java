@@ -27,18 +27,15 @@ public class UserController {
         userService.saveUser(user);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateUser(@PathVariable("id") Integer id,@RequestBody UserDto user){
-        userService.updateUser(id,user);
+    public void updateUser(@PathVariable("id") Integer id, @RequestBody UserDto user){
+        userService.updateUser(id, user);
     }
 
-
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable("id") Integer id){
         userService.deleteUser(id);
     }
-
-
 
 }
